@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حاسبة تكلفة المطبخ</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="calculator-container">
+        <h2><i class="fas fa-calculator"></i> حاسبة تكلفة المطبخ</h2>
+        
+        <div class="input-container">
+            <div class="input-group">
+                <label><i class="fas fa-money-bill-wave"></i> سعر المتر (ريال سعودي)</label>
+                <input type="number" id="meter_price" step="0.01" min="0" placeholder="أدخل السعر">
+            </div>
+
+            <div class="input-group">
+                <label><i class="fas fa-ruler"></i> عدد الأمتار الطولية للمطبخ (متر)</label>
+                <input type="number" id="meters_length" step="0.01" min="0" placeholder="أدخل عدد الأمتار">
+            </div>
+
+            <div class="input-group">
+                <label><i class="fas fa-window-maximize"></i> عدد الأمتار الطولية للنوافذ (متر)</label>
+                <input type="number" id="window_width" step="0.01" min="0" placeholder="أدخل عرض النوافذ">
+            </div>
+
+            <div class="input-group">
+                <label><i class="fas fa-fire"></i> عرض الفرن (متر)</label>
+                <input type="number" id="oven_width" step="0.01" min="0" placeholder="أدخل عرض الفرن">
+            </div>
+
+            <div class="input-group">
+                <label><i class="fas fa-snowflake"></i> عرض الثلاجة (متر)</label>
+                <input type="number" id="fridge_width" step="0.01" min="0" placeholder="أدخل عرض الثلاجة">
+            </div>
+
+            <div class="input-group">
+                <label><i class="fas fa-tint"></i> عرض الغسالة (متر)</label>
+                <input type="number" id="washer_width" step="0.01" min="0" placeholder="أدخل عرض الغسالة">
+            </div>
+
+            <div class="input-group">
+                <label><i class="fas fa-angle-up"></i> عدد الزوايا العلوية</label>
+                <input type="number" id="upper_angels" min="0" placeholder="أدخل عدد الزوايا العلوية">
+            </div>
+
+            <div class="input-group">
+                <label><i class="fas fa-angle-down"></i> عدد الزوايا السفلية</label>
+                <input type="number" id="lower_angels" min="0" placeholder="أدخل عدد الزوايا السفلية">
+            </div>
+        </div>
+
+        <button onclick="resetFields()" class="reset-btn"><i class="fas fa-redo-alt"></i> إعادة تعيين</button>
+
+        <div class="result">
+            <h3>💰 إجمالي السعر: <span id="total_price">0</span> ريال سعودي</h3>
+            <p>📏 إجمالي الطول المخصوم: <span id="discounted_length">0</span> متر</p>
+            <p>📐 الطول الصافي: <span id="net_length">0</span> متر</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
