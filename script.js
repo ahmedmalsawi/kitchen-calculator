@@ -8,7 +8,7 @@ function calculateTotal() {
     let upperAngels = parseInt(document.getElementById("upper_angels").value) || 0;
     let lowerAngels = parseInt(document.getElementById("lower_angels").value) || 0;
 
-    let discountedLength = (washerWidth / 3) + (ovenWidth / 3) + ((windowWidth * 3) / 2) + ((upperAngels * 0.35) / 3) + ((fridgeWidth * 3) / 2) + ((lowerAngels * 0.6 * 3) / 2);
+    let discountedLength = (washerWidth / 3) + (ovenWidth / 3) + ((windowWidth / 3) * 2) + ((upperAngels * 0.35) / 3) + ((fridgeWidth / 3) * 2) + (((lowerAngels * 0.6) / 3) * 2);
     let netLength = metersLength - discountedLength;
     let total = meterPrice * netLength;
 
