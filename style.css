@@ -132,3 +132,92 @@ h2 {
         padding: 12px;
     }
 }
+
+@media print {
+    * {
+        font-size: 14px;
+    }
+
+    body {
+        zoom: %; /* تصغير النص قليلاً لضمان احتواء المحتوى */
+        background: none;
+        margin: 0;
+        padding: 0;
+        -webkit-print-color-adjust: exact;
+    }
+
+    .calculator-container {
+        width: 100%;
+        max-width: 100%;
+        padding: 20px;
+        border: none;
+        box-shadow: none;
+        background: white;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .input-group {
+        margin-bottom: 10px;
+    }
+
+    .input-group label {
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .input-group input {
+        font-size: 14px;
+        padding: 10px;
+        border: 1px solid #ccc;
+    }
+
+    .result {
+        font-size: 16px;
+        padding: 10px;
+        text-align: center;
+        background: #185a9d !important;
+        color: white !important;
+        border-radius: 8px;
+    }
+
+    /* تحسين توسيط المحتوى */
+    .calculator-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        page-break-inside: avoid;
+    }
+
+    /* إزالة الهوامش الجانبية */
+    @page {
+        size: A4;
+        margin: 1mm;
+    }
+
+    /* إخفاء الأزرار أثناء الطباعة */
+    .print-btn, .reset-btn {
+        display: none;
+    }
+}
+
+
+.print-btn{
+    width: 100%;
+    padding: 12px;
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+

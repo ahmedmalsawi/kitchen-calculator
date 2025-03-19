@@ -25,3 +25,6 @@ function resetFields() {
 document.querySelectorAll("input").forEach(input => {
     input.addEventListener("input", calculateTotal);
 });
+function printPage() {
+    window.print();
+}
