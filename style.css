@@ -221,3 +221,10 @@ h2 {
     transition: 0.3s;
 }
 
+.counter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* تباعد مناسب عن المحتوى العلوي */
+}
+
